@@ -18,4 +18,4 @@ jobs:
       run: shards install --production
     - name: Build
       run: |
-        crystal compile_x86_64-linux-gnu.cr
+        crystal compile_x86_64-linux.cr
