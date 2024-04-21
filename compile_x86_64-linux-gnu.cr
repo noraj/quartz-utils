@@ -3,7 +3,7 @@ require "yaml"
 platforms = %w[x86_64-linux-gnu]
 
 shard = {} of YAML::Any => YAML::Any
-yaml = File.open("shard.yml") do |file|
+File.open("shard.yml") do |file|
   shard = YAML.parse(file)
 end
 executables = shard["executables"].as_a

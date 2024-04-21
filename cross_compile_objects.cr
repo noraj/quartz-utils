@@ -5,7 +5,7 @@ tiers_2 = %w[aarch64-linux-gnu aarch64-linux-musl arm-linux-gnueabihf i386-linux
 platforms = tiers_1 + tiers_2
 
 shard = {} of YAML::Any => YAML::Any
-yaml = File.open("shard.yml") do |file|
+File.open("shard.yml") do |file|
   shard = YAML.parse(file)
 end
 executables = shard["executables"].as_a
