@@ -1,0 +1,21 @@
+name: Build / Release
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  dist_linux:
+    runs-on: ubuntu-latest
+    container:
+      image: crystallang/crystal:1.12-alpine
+    steps:
+    - uses: actions/checkout@v4
+    - name: Update Libs
+      run: apk add --update --upgrade --no-cache --force-overwrite libxml2-dev yaml-dev
+    - name: Install dependencies
+      run: shards install --production
+    - name: Build
+      run: |
+        crystal compile_x86_64-linux-gnu.cr

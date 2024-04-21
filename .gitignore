@@ -1,0 +1,6 @@
+# Third-party dependencies
+/lib/
+# Third-party binaries
+/bin/ameba*
+# All bins
+/bin/*

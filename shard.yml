@@ -1,0 +1,28 @@
+name: quartz-utils
+version: 0.0.1
+description: TODO
+
+authors:
+  - Alexandre ZANNI <alexandre.zanni@europe.com>
+
+targets:
+  url2host:
+    main: src/url2host.cr
+
+executables:
+  - url2host
+
+crystal: ">= 1.8, < 2.0"
+
+license: MIT
+documentation: https://github.com/noraj/quartz-utils/tree/master/docs
+homepage: https://github.com/noraj/quartz-utils
+repository: https://github.com/noraj/quartz-utils
+
+dependencies:
+  docopt:
+    github: chenkovsky/docopt.cr
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 1.6.0
