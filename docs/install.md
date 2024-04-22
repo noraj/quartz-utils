@@ -8,7 +8,7 @@ Put the binaries somewhere under your PATH.
 
 ## ArchLinux
 
-AUR: [quartz-utils](https://aur.archlinux.org/packages/quartz-utils)
+AUR: [quartz-utils](https://aur.archlinux.org/packages/quartz-utils), [quartz-utils-git](https://aur.archlinux.org/packages/quartz-utils-git), [quartz-utils-bin](https://aur.archlinux.org/packages/quartz-utils-bin)
 
 Manually:
 
@@ -23,3 +23,7 @@ With an AUR helper ([Pacman wrappers](https://wiki.archlinux.org/index.php/AUR_h
 ```shell
 pikaur -S quartz-utils
 ```
+
+## Packages
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/quartz-utils.svg)](https://repology.org/project/quartz-utils/versions)
