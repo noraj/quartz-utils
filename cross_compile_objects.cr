@@ -13,6 +13,6 @@ executables = shard["executables"].as_a
 executables.each do |executable|
   platforms.each do |platform|
     puts "[+] #{executable}-#{platform}"
-    system("docker run --rm -it -v $PWD:/workspace -w /workspace crystallang/crystal:1.12.1-alpine crystal build src/#{executable}.cr --release --static --no-debug -o bin/#{executable}-#{platform} --cross-compile --target #{platform}")
+    system("docker run --rm -it -v $PWD:/workspace -w /workspace crystallang/crystal:1.13.1-alpine crystal build src/#{executable}.cr --release --static --no-debug -o bin/#{executable}-#{platform} --cross-compile --target #{platform}")
   end
 end
