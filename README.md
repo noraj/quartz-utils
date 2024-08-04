@@ -25,6 +25,7 @@ See [install](docs/install.md) instructions.
 ## Utils & Usage
 
 - `url2host`: Extract host from URL
+- `stripansi`: Remove ANSI escape sequences
 
 See examples at [Utils](docs/utils.md)
 
