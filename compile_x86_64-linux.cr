@@ -11,7 +11,10 @@ executables = shard["executables"].as_a
 executables.each do |executable|
   platforms.each do |platform|
     puts "[+] #{executable}-#{platform}"
-    cc = `crystal build src/#{executable}.cr --release --static --no-debug -o bin/#{executable}-#{platform} --cross-compile --target #{platform}`
+    build_cmd = "crystal build src/#{executable}.cr --release --static --no-debug -o bin/#{executable}-#{platform} --cross-compile --target #{platform}"
+    puts "  [+] #{build_cmd}"
+    cc = `#{build_cmd}`
+    puts "  [+] #{cc}"
     system(cc)
   end
 end
