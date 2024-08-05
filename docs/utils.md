@@ -1,6 +1,7 @@
 # Utilities
 
 - `url2host`: Extract host from URL
+- `stripansi`: Remove ANSI escape sequences
 
 ## url2host
 
@@ -68,4 +69,27 @@ github.com
 ➜ echo "https://pwn.by/noraj,https://github.com/noraj" | url2host -d ","
 pwn.by
 github.com
+```
+
+## stripansi
+
+Text as argument:
+
+```
+➜ stripansi $(echo -e "\e[0m\e[01;36mbin\e[0m,\e[01;34mboot\e[0m,\e[30;42mtmp\e[0m")
+bin,boot,tmp
+```
+
+Text from STDIN:
+
+```
+➜ ls --color=always / | bin/stripansi
+bin
+boot
+dev
+efi
+etc
+home
+lib
+…
 ```
