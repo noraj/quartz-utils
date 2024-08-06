@@ -2,6 +2,8 @@
 
 - `url2host`: Extract host from URL
 - `stripansi`: Remove ANSI escape sequences
+- `crlf2lf`: Convert CRLF to LF
+- `lf2crlf`: Convert LF to CRLF
 
 ## url2host
 
@@ -92,4 +94,30 @@ etc
 home
 lib
 …
+```
+
+## crlf2lf & lf2crlf
+
+LF to CRLF:
+
+```
+➜ echo -n "saut\nde\nligne" | lf2crlf
+saut
+de
+ligne
+
+➜ echo -n "saut\nde\nligne" | lf2crlf | hexyl --border none
+ 00000000  73 61 75 74 0d 0a 64 65   0d 0a 6c 69 67 6e 65     saut__de __ligne
+```
+
+CRLF to LF:
+
+```
+➜ echo -n "saut\r\nde\r\nligne" | crlf2lf
+saut
+de
+ligne
+
+➜ echo -n "saut\r\nde\r\nligne" | crlf2lf | hexyl --border none
+ 00000000  73 61 75 74 0a 64 65 0a   6c 69 67 6e 65           saut_de_ ligne
 ```

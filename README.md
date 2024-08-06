@@ -26,6 +26,8 @@ See [install](docs/install.md) instructions.
 
 - `url2host`: Extract host from URL
 - `stripansi`: Remove ANSI escape sequences
+- `crlf2lf`: Convert CRLF to LF
+- `lf2crlf`: Convert LF to CRLF
 
 See examples at [Utils](docs/utils.md)
 

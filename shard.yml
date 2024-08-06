@@ -1,5 +1,5 @@
 name: quartz-utils
-version: 0.0.3
+version: 0.0.4
 description: TODO
 
 authors:
@@ -10,10 +10,16 @@ targets:
     main: src/url2host.cr
   stripansi:
     main: src/stripansi.cr
+  crlf2lf:
+    main: src/crlf2lf.cr
+  lf2crlf:
+    main: src/lf2crlf.cr
 
 executables:
   - url2host
   - stripansi
+  - crlf2lf
+  - lf2crlf
 
 crystal: ">= 1.8, < 2.0"
 
