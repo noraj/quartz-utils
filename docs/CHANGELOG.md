@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [unreleased]
+
+Chore:
+
+- Add support for Crystal 1.14 and 1.15
+
 ## [0.0.4](https://github.com/noraj/quartz-utils/releases/tag/0.0.4)
 
 New commands:
