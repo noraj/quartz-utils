@@ -4,7 +4,7 @@
 
 Chore:
 
-- Add support for Crystal 1.14 and 1.15
+- Add support for Crystal 1.14 and 1.18
 
 ## [0.0.4](https://github.com/noraj/quartz-utils/releases/tag/0.0.4)
 
